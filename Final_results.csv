@@ -1,0 +1,4 @@
+,top_carry_bypass_adder,top_carry_select_adder,top_comparator,top_counter,top_full_adder,top_half_adder,top_mealy,top_MINTERMS,top_multiplier,top_shifter
+Power,11.112,3.009,1.678,3.813,1.035,0.796,0.281,0.576,4.185,2.332
+Delay,12.49,6.708,8.069,4.364,5.937,5.895,4.147,5.921,8.609,4.498
+LUTs,23.0,4.0,9.0,3.0,1.0,1.0,6.0,1.0,15.0,9.0

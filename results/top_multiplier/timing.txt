@@ -1,0 +1,48 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Feb 16 07:53:23 2025
+| Host         : vlsi.iitgn.ac.in running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_multiplier
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 A[3]
+                            (input port)
+  Destination:            P[7]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.609ns  (logic 3.876ns (45.022%)  route 4.733ns (54.978%))
+  Logic Levels:           6  (IBUF=1 LUT4=1 LUT6=3 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R22                                               0.000     0.000 r  A[3] (IN)
+                         net (fo=0)                   0.000     0.000    A[3]
+    R22                  IBUF (Prop_ibuf_I_O)         0.898     0.898 r  A_IBUF[3]_inst/O
+                         net (fo=7, routed)           1.381     2.279    A_IBUF[3]
+    SLICE_X0Y105         LUT6 (Prop_lut6_I4_O)        0.105     2.384 r  P_OBUF[3]_inst_i_2/O
+                         net (fo=4, routed)           0.549     2.933    p_0_in[1]
+    SLICE_X1Y105         LUT6 (Prop_lut6_I1_O)        0.105     3.038 r  P_OBUF[4]_inst_i_3/O
+                         net (fo=2, routed)           0.777     3.815    sum2[2]
+    SLICE_X0Y106         LUT4 (Prop_lut4_I2_O)        0.115     3.930 r  P_OBUF[7]_inst_i_3/O
+                         net (fo=3, routed)           0.432     4.361    P_OBUF[7]_inst_i_3_n_0
+    SLICE_X1Y106         LUT6 (Prop_lut6_I3_O)        0.275     4.636 r  P_OBUF[7]_inst_i_1/O
+                         net (fo=1, routed)           1.595     6.231    P_OBUF[7]
+    P24                  OBUF (Prop_obuf_I_O)         2.378     8.609 r  P_OBUF[7]_inst/O
+                         net (fo=0)                   0.000     8.609    P[7]
+    P24                                                               r  P[7] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

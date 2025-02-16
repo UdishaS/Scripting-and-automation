@@ -1,0 +1,47 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Sun Feb 16 06:00:29 2025
+| Host         : vlsi.iitgn.ac.in running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_comparator
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+--------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 B[5]
+                            (input port)
+  Destination:            A_equal_B[0]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        8.069ns  (logic 3.978ns (49.297%)  route 4.091ns (50.703%))
+  Logic Levels:           5  (CARRY4=1 IBUF=1 LUT2=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R21                                               0.000     0.000 r  B[5] (IN)
+                         net (fo=0)                   0.000     0.000    B[5]
+    R21                  IBUF (Prop_ibuf_I_O)         0.880     0.880 r  B_IBUF[5]_inst/O
+                         net (fo=4, routed)           1.597     2.477    B_IBUF[5]
+    SLICE_X0Y108         LUT4 (Prop_lut4_I3_O)        0.105     2.582 r  A_gt_B_OBUF[0]_inst_i_8/O
+                         net (fo=1, routed)           0.000     2.582    A_gt_B_OBUF[0]_inst_i_8_n_0
+    SLICE_X0Y108         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.332     2.914 f  A_gt_B_OBUF[0]_inst_i_2/CO[3]
+                         net (fo=2, routed)           1.010     3.924    A_gt_B0
+    SLICE_X0Y115         LUT2 (Prop_lut2_I1_O)        0.126     4.050 r  A_equal_B_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           1.484     5.534    A_equal_B_OBUF[0]
+    P23                  OBUF (Prop_obuf_I_O)         2.535     8.069 r  A_equal_B_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     8.069    A_equal_B[0]
+    P23                                                               r  A_equal_B[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
